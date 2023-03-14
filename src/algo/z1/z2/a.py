@@ -44,7 +44,7 @@ def generate_data(data_size):
     r = []
     wynik = []
     for _ in range(data_size*2):
-         r.append(randint(0,25))
+         r.append(randint(1,25))
     for u in r[0:int(data_size*2/2)]:
         x.append(u)
     for n in r[int(data_size*2/2):10*5]:
@@ -63,4 +63,4 @@ def generate_data(data_size):
     return(wynik)
 
 
-print(generate_data(3))
+print(generate_data(25))
