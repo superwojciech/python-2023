@@ -1,5 +1,5 @@
 # from datetime import datetime
-# from random import randint
+from random import randint
 
 
 # def gen_random_numbers(count: int, seed_number: int):
@@ -24,18 +24,43 @@
 
 #     print(f'czas wykonania: {time_sum / REPETITIONS:.6} s')
 
+# a = [2,5,7,9]
+# b = [4,8,18,27]
+# wynik = []
 
-   
+# for i in a:
+#     incr = 0
+#     for j in b:    
+#         if j%i == 0: 
+#             incr +=1
+#     wynik.append(incr)
+# print(wynik)
+
+
+# coś, co generuje 2 listy takiej samej wielkości z losowych liczb
+def generate_data(data_size):
+    x = []
+    y = []
+    r = []
+    wynik = []
+    for _ in range(data_size*2):
+         r.append(randint(0,25))
+    for u in r[0:int(data_size*2/2)]:
+        x.append(u)
+    for n in r[int(data_size*2/2):10*5]:
+        y.append(n)
     
+    print(x)
+    print(y)
 
-a = [2,5,7,9]
-b = [4,8,18,27]
-wynik = []
+    for i in x:
+        incr = 0
+        for j in y:    
+            if j%i == 0: 
+                incr +=1
+        wynik.append(incr)
 
-for i in a:
-    incr = 0
-    for j in b:    
-        if j%i == 0: 
-            incr +=1
-    wynik.append(incr)
-print(wynik)
+    return(wynik)
+
+
+print(generate_data(3))
