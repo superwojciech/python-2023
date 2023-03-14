@@ -43,3 +43,6 @@ if __name__ == '__main__':
     plt.xlabel("Rozmiar danych")
     plt.ylabel("Czas wykonania (usec)")
     plt.show()
+
+
+#test
