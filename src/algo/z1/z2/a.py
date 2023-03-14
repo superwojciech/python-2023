@@ -63,4 +63,4 @@ def generate_data(data_size):
     return(wynik)
 
 
-print(generate_data(3))
+print(generate_data(25))
