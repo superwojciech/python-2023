@@ -6,12 +6,35 @@ from random import seed, randint
 def generate_data(data_size):
     # tutaj wstawić coś co generuje dane dla naszego algorytmu
     # return [randint(0, 10 ** 6) for _ in range(data_size)]
-    pass
+    x = []
+    y = []
+    r = []
+    for _ in range(data_size*2):
+        r.append(randint(0,25))
+    for u in r[0::2]:
+        x.append(u)
+    for n in r[1::2]:
+        y.append(n)
+    return x,y
+    
 
 
 def solve_problem(data):
     # tutaj wstawić algorytm który rozwiązuje dany problem dla danych `data
-    pass
+    x = data[0]
+    y = data[1]
+    wynik=[]
+    for i in x:
+        incr = 0
+        if i!=0:
+            for j in y:    
+                if (j!=0) & (j%i == 0): 
+                    incr +=1
+        wynik.append(incr)
+
+    
+    return(wynik)
+    
 
 
 def run_tests(generator, solver):

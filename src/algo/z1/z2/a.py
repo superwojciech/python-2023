@@ -44,7 +44,7 @@ def generate_data(data_size):
     r = []
     wynik = []
     for _ in range(data_size*2):
-         r.append(randint(1,25))
+         r.append(randint(0,25))
     for u in r[0::2]:
         x.append(u)
     for n in r[1::2]:
@@ -55,10 +55,12 @@ def generate_data(data_size):
 
     for i in x:
         incr = 0
-        for j in y:    
-            if j%i == 0: 
-                incr +=1
+        if i!=0:
+            for j in y:    
+                if (j!=0) & (j%i == 0): 
+                    incr +=1
         wynik.append(incr)
+
 
     return(wynik)
 
