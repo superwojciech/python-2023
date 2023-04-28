@@ -10,7 +10,7 @@ def generate_data(data_size):
     y = []
     r = []
     for _ in range(data_size*2):
-        r.append(randint(0,25))
+        r.append(randint(0,5))
     for u in r[0::2]:
         x.append(u)
     for n in r[1::2]:
@@ -41,7 +41,7 @@ def run_tests(generator, solver):
     size = 10
     sizes = []
     times = []
-    while size < 10000:
+    while size < 1000:
         print(f'testing solver for {size=}')
         data = generator(size)
         REPETITIONS = 400
