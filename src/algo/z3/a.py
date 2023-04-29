@@ -22,4 +22,3 @@ def generate_data(data_size):
 if __name__ == '__main__':
     x, y = run_tests(generate_data, solve, max_size=4 * 10 ** 5)
     visualize(x, y)
-    # print(solve(a=[1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1,1,1,2,3,1,1,1,1,2,1,1,1,1,1]))
