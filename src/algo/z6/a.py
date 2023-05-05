@@ -3,6 +3,5 @@ def has_duplicates(lista):
 
 
 
-a=['aa', 'aa', 'c', 'bb']
-print(a)
-print(has_duplicates(a))
+a=['aa', 'a', 'c', 'bb']
+print(has_duplicates(a)) #Jeśli false to nic sie nie powtarza, jeśli true są duplikaty
