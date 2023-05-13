@@ -29,14 +29,16 @@ def open_lock(key: list[int], lock: list[int]) -> int:
             lock_index += 1
         else:
             key_index += 1
-    
+    result = ""
     if lock_index == len(lock):
-        return 0  #zamek sie otwiera
+        result = "poprawny klucz"
+        return result  #zamek sie otwiera
     else:
-        return 1  #błędny klucz
+        result = "nie możesz wejść, zły klucz"
+        return result  #zamek sie otwiera
 
 # mały test
 key = [2,3,4]
-lock = [2,4,4]
+lock = [2,3,4]
 
 print(open_lock(key,lock))
