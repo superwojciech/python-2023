@@ -34,3 +34,9 @@ def open_lock(key: list[int], lock: list[int]) -> int:
         return 0  #zamek sie otwiera
     else:
         return 1  #błędny klucz
+
+# mały test
+key = [2,3,4]
+lock = [2,4,4]
+
+print(open_lock(key,lock))
