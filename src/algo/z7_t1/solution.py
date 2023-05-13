@@ -36,9 +36,3 @@ def open_lock(key: list[int], lock: list[int]) -> int:
                         return result  #zamek sie otwiera
         result = "możesz wejść"
         return result  #zamek sie otwiera
-
-# mały test
-key = [1,2]
-lock = [2,1]
-
-print(open_lock(key,lock))
