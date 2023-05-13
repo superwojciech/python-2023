@@ -16,9 +16,20 @@ jeśli długości *'ek klucza + długości #'ów zamka są dla wszystkich takie 
 
 
 def open_lock(key: list[int], lock: list[int]) -> int:
-    """
-    :param key:   np. [4,1,1,3,1,2]
-    :param lock:  np  [1,4,2,2,4,3]
-    :return:    -1 jeśli wartości są "invalid" (np. <0); 0 jeśli klucz otwiera zamek, 1 jeśli klucz nie otwiera zamka
-    """
-    return 0
+    
+    if any(x < 0 for x in key) or any(x < 0 for x in lock):
+        return -1    
+    
+    key_index = 0
+    lock_index = 0
+    while key_index < len(key) and lock_index < len(lock):
+        if key[key_index] == lock[lock_index]:
+            key_index += 1
+            lock_index += 1
+        else:
+            key_index += 1
+    
+    if lock_index == len(lock):
+        return 0  
+    else:
+        return 1  
