@@ -7,7 +7,7 @@
 *     ####
 **     ###
 
-jeśli długości *'ek klucza + długości #'ów zamka są dla wszystkich takie same, to klucz otwiera zamek
+jeśli długości *'ek klucza + długości #'ów zamka są dla wszystkich takie same, to klucz otwiera zamek3
 
 
 """
