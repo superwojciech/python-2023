@@ -19,5 +19,9 @@ Zadanie -- mamy dostępny zbiór sylab, oraz pewne słowo `word`; pytanie -- czy
 
 
 def construct_word(syllables: set[str], word: str) -> bool:
-    #todo: your solution here
+    x = list(syllables)
+    for char in word:
+        if char not in x:
+            return False
     return True
+ 
