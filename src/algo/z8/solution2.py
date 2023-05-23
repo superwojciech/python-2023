@@ -19,9 +19,14 @@ Zadanie -- mamy dostępny zbiór sylab, oraz pewne słowo `word`; pytanie -- czy
 
 
 def construct_word(syllables: set[str], word: str) -> bool:
-    x = list(syllables)
-    for char in word:
-        if char not in x:
-            return False
-    return True
+    x = []
+
+    for i in range(len(word)):
+        if i+1 < len(word):
+            x.append(word[i] + word[i+1])
+    if set(x) & syllables == set(x):
+        return True
+    return False
+
  
+print(construct_word({"aa", "bb", "cc"}, "aaccbb"))
