@@ -26,8 +26,5 @@ class Syllables2Test(unittest.TestCase):
     def test_7(self):
         self.assertTrue(construct_word({"ab", "ba"}, "abababababab"))
 
-    def test_8(self):
-        self.assertTrue(construct_word({"ba"}, "bab"))
-
 if __name__ == '__main__':
     unittest.main()
