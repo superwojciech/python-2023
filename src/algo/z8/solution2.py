@@ -27,6 +27,3 @@ def construct_word(syllables: set[str], word: str) -> bool:
     if set(x) & syllables == set(x):
         return True
     return False
-
- 
-print(construct_word({"aa", "bb", "cc"}, "aaccbb"))
