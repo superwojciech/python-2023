@@ -21,5 +21,12 @@ b = [1, 5, 1]  (teraz na ostatniej pozycji odjęliśmy 5, czyli a[1])
 
 
 def equalize_parity(a: list[int]) -> bool:
-    # todo: your solution here
-    return True
+    is_all_even = all(x % 2 == 0 for x in a)
+    is_all_odd = all(x % 2 != 0 for x in a)
+    min_num = min(a)
+
+    if min_num % 2 != 0:
+        return True
+    else:
+        return is_all_even or is_all_odd
+
