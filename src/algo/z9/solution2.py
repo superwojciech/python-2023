@@ -12,13 +12,16 @@ def get_latest(versions: list[str]) -> str:
     for i in range(len(versions)):
         return max(versions)
 
-print(get_latest(['1.13.0', '2.0.5', '1.1.7']))
-
 def next_version(version: str, level: int) -> str:
-    """
-    :param version: Current version
-    :param level: Which part should be incremented; 0: major, 1: minor, 2: patch
-    :return: Properly incremented version
-    """
-    # todo: your code
-    return '0.0.1'
+    x, y, z = version.split('.')
+    if level == 0:
+        x = str(int(x) + 1)
+        y = "0"
+        z = "0"
+    elif level == 1:
+        y = str(int(y) + 1)
+        z = "0"
+    elif level == 2:
+        z = str(int(z) + 1)
+    return '.'.join([x, y, z])
+
