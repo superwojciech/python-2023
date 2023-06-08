@@ -1,10 +1,16 @@
-def find(x):
+def find(x: str) -> int:
+    
     long = 0
     count = 1
-    for i in range(len(x)-1):
-        if x[i] == x[i+1]:
+
+    for i in range(1, len(x)):
+        
+        if x[i] == x[i - 1] and x[i] in ['<', '>']:
             count += 1
-        elif count > long:
-            long = count
+
+        else:
+            long = max(long, count)
             count = 1
+
+    long = max(long, count)
     return long
