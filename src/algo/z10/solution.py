@@ -2,6 +2,8 @@ def find(x: str) -> int:
     
     long = 0
     count = 1
+    if '<' not in x and '>' not in x:
+        return 0
 
     for i in range(1, len(x)):
         
