@@ -42,6 +42,10 @@ class TaskATests(unittest.TestCase):
         dec = get_decomposition(3, 2, 1)
         self.assertTrue(len(dec) == 0)
 
+    def test_7(self):
+        dec = get_decomposition(0, 5, 1)
+        self.assertTrue(len(dec) == 0)        
+
 
 if __name__ == '__main__':
     unittest.main()

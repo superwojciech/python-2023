@@ -13,5 +13,32 @@ czyli ostatecznie
 
 ```py
 def get_decomposition(n, k, x) -> list[int]:
-  pass
+    numbers = list(range(1, k+1))
+    numbers.remove(x)
+
+    result = []
+    total_sum = 0
+
+    for num in reversed(numbers):
+        if num == x:
+            continue
+
+    if num <= n - total_sum:
+            combination.append(num)
+            total_sum += num
+
+    if total_sum == n:
+            break    
+
+    if total_sum == n:
+        return result
+    else:
+        return 0    
+                       
+n = 10
+k = 5
+x = 3
+
+result = find_combination(n, k, x)
+
 ```
