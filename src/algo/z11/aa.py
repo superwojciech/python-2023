@@ -11,6 +11,5 @@ for x in w:
 
 print(get_all_elems(bag))
 
-
 zz = 3.1415
 print(zz.__hash__())
