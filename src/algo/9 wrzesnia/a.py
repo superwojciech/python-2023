@@ -1,7 +1,7 @@
 def is_on_board(position: tuple[int, int], max_dim: tuple[int, int] = (8, 8)):
     """
     
-    Sprawdz, czy dane pole znajduje się na szachownicy o określonych maksymalnych wymiarach.
+    Sprawdz, czy dane pole znajduje się na szachownicy o określonych maksymalnych wymiarach!
 
     """
     row, col = position
